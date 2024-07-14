@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body{
+    background-color: #201f1f;
+    background-image: url('Black-Map_Background.jpg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: #fff;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Montserrat', Sans-serif;
+    position: relative;
+    top: 50px;
+  
+}
+
+p{
+    position: relative;
+    top: 60px;
+    font-size: 17px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+button{
+    background-image: linear-gradient(to bottom, #f8b500, #f7ed2b);
+    border-radius: 10px;
+    position: fixed;
+    left: 63px;
+    bottom: 49px;
+    width: 108px;
+    height: 33px;
+    border: none;
+}
+
+#inputs{
+    visibility: visible;
+    position: relative;
+    top: 84px;
+    left: 435px;
+    height: 223px;
+    width: 442px;
+    text-align: left;
+    border: 3px solid #f8B500;
+    padding: 20px;
+}
+
+#output{
+    visibility: hidden;
+    position: fixed;
+    top: 188px;
+    left: 443px;
+    height: 223px;
+    width: 442px;
+    text-align: left;
+    border: 3px solid #f8B500;
+    padding: 20px;
+}
+
+#inputs.hidden{
+    visibility: hidden;
+}
+
+#output.visible {
+    visibility: visible;
+}
+
+#output p{
+    position: relative;
+    top: -7px;
+}
+
+input{
+    position: relative;
+    border: 2px solid #f8B500;
+    background-color: transparent;
+    color: #fff;
+}
+
+.input{
+    position: relative;
+    top: -8px;
+}
+
+.total{
+    background-image: linear-gradient(to bottom, #f8b500, #f7ed2b);
+    border-radius: 10px;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    top: -12px;
+    left: 165px
+}

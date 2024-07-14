@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="background-image" href="bitmap.svg">
+    <title>Caminhão</title>
+</head>
+<body>
+    <h2>VIAGEM DE CARRO</h2>
+    <p>Insira as seguintes informações:</p>
+    <div id="inputs">
+        <p class="input">Marca: <input id="marca" type="text" maxlength="800" placeholder=""></p>
+        <p class="input">Modelo: <input id="modelo" type="text" maxlength="800" placeholder=""></p>
+        <p class="input">Ano: <input id="ano" type="Number" maxlength="800" placeholder=""></p>
+        <p class="input">Consumo por litro: <input id="consumo" type="Number" maxlength="800" placeholder=""> km/l</p>
+        <p class="input">Quilômetros a serem percorridos: <input id="km" type="Number" maxlength="800" placeholder=""> km</p>
+        
+        <button class="total" onclick = "imprimir()"></a>Calcular</button>
+        
+    </div>
+    <div id="output">
+        <script>
+            function imprimir(){
+            
+                var marca = document.getElementById('marca').value;
+                var modelo = document.getElementById('modelo').value;
+                var ano = Number.parseInt(document.getElementById('ano').value);
+                var consumo = Number.parseFloat(document.getElementById('consumo').value);
+                var km =  Number.parseFloat(document.getElementById('km').value);
+                var pPedagio = 11.70;
+                var pMedioDis = 4.20;
+                var preco = (((km/consumo) * pMedioDis) + pPedagio);
+
+                var outputDiv = document.getElementById('output');
+                vibility: 
+                outputDiv.innerHTML = `
+                <p>Marca: ${marca}<br></p>
+                <p>Modelo: ${modelo}<br></p>
+                <p>Ano: ${ano}<br></p></p>
+                <p>Consumo por litro: ${consumo} Km/l<br></p>
+                <p>Preço do pedágio: R$${pPedagio} <br></p>
+                <p>Preço tota da viagem: ${preco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}<br></p>`
+                    
+                var inputDiv = document.getElementById('inputs');
+                inputDiv.classList.remove('visible');
+                inputDiv.classList.add('hidden');
+                outputDiv.classList.add('visible');
+            }
+            
+        </script>
+    </div>
+    <button>
+        <a href="index.html">Voltar</a>
+    </button>
+</body>
+</html>
